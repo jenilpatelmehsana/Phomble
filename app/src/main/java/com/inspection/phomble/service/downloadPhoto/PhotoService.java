@@ -1,6 +1,7 @@
 package com.inspection.phomble.service.downloadPhoto;
 
 import static com.inspection.phomble.service.Constants.BASE_API;
+import static com.inspection.phomble.service.Constants.CLIENT_ID;
 import static com.inspection.phomble.service.Constants.RANDOM_EXTENSION;
 
 import java.io.BufferedReader;
@@ -18,7 +19,7 @@ public class PhotoService {
     }
 
     public static PhotoService getPhotoServiceInstance() {
-        if(photoServiceInstance == null) {
+        if (photoServiceInstance == null) {
             photoServiceInstance = new PhotoService();
         }
         return photoServiceInstance;
@@ -60,6 +61,6 @@ public class PhotoService {
     }
 
     public String getRandomPhotoURL() {
-        return BASE_API + RANDOM_EXTENSION;
+        return BASE_API + RANDOM_EXTENSION + CLIENT_ID;
     }
 }
