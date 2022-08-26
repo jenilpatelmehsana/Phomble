@@ -30,7 +30,6 @@ public class PhotoHolderFragment extends Fragment {
         imageThumbnail = getView().findViewById(R.id.thumbnailImage);
 
         String imageLink = "https://images.unsplash.com/photo-1660480904370-a5dcd0be395b?crop=entropy\\\u0026cs=tinysrgb\\\u0026fit=max\\\u0026fm=jpg\\\u0026ixid=MnwzNTgzOTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjE0NTc0MzE\\\u0026ixlib=rb-1.2.1\\\u0026q=80\\\u0026w=1080";
-
-        Glide.with(getView()).load(imageLink).into(imageThumbnail);
+        Glide.with(getView()).load(imageLink).centerCrop().into(imageThumbnail);
     }
 }
